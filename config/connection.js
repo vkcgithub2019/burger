@@ -1,20 +1,20 @@
 // Set up MySQL connection.
-    var mysql = require("mysql");
+var mysql = require("mysql");
+//set up passwords with the dotenv package.
+/* require("dotenv").config(); */
 
-    require("dotenv").config();
-    if(process.env.NODE_ENV === "production"){
-      connection = mysql.createConnection(process.env.JAWSDB_URL);
-    }
-    
-
-    var connection = mysql.createConnection({
-    host: "localhost",
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+//reminder to self, it will not work at port 3000
+  var connection = mysql.createConnection({
     port: 3306,
+    host: "localhost",
     user: "root",
-    password: "",
+    password: process.env.MYSQL_PASSWORD,
     database: "burger_db"
   });
-
+};
 
 // Make connection.
 connection.connect(function(err) {
