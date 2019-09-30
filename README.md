@@ -3,6 +3,9 @@ This app will store every burger in a database, whether devoured or not.
 
 The MVC design is required and MYSQL,Node, Express, Handlebars, and ORM are used in this app. 
 
+This is the link to the deployed app in Heroku:
+https://secure-dusk-83951.herokuapp.com
+
 
 
 
