@@ -1,8 +1,6 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 var connection;
-//set up passwords with the dotenv package.
-/* require("dotenv").config(); */
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);

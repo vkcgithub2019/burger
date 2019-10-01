@@ -5,8 +5,6 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
-//adding __dirname + to public is what allowed me access to the images in assets/img folder
 app.use(express.static(__dirname + "/public"));
 
 // parse application/x-www-form-urlencoded
